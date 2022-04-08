@@ -1,11 +1,11 @@
-# Car Parking Management System
+# Car Parking Rental Management System
 
 Car Parking Management System is an online website where owners can rent their parking space & users can find & rent optimal parking space with the minimum rent in the whole country **(One price for every Vehicle)** for desired period. 
 ## BRACU - CSE 370 : Database Systems Lab Project 
 
 ### Group Mates:
 |Name|StudentID  | 
-|--|--|--|--|
+|--|--|
 |  Tanjim Reza|20101065  |
 |  Raihanul Islam Bhuiyan |2010****  |
 |  Mahin Shahriar Efaz |2010****  |
@@ -14,18 +14,23 @@ Car Parking Management System is an online website where owners can rent their p
 ## Setup Instructions 
 Requirements: 
 
-    python, django,sql-server
-
+```ruby
+python, django, sql-server
+```
 Install Requirements:
 
-    pip install -r requirements.txt
+```python
+python, django, sql-server
+```
 Start Website: 
 
-    python manage.py runserver
-
+```python 
+python manage.py runserver
+```
  
+<details><summary>Features</summary>
+<p>
 
-## Features 
 
  - [ ] Feature 1
 	 - [ ] Sub Feature 1 
@@ -48,3 +53,5 @@ Start Website:
 	 - [ ] Sub Feature 2
 	 - [ ] Sub Feature 3 
 	 - [ ] Sub Feature 4
+	</p> 
+	</details>
