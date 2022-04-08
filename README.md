@@ -8,7 +8,7 @@ Car Parking Management System is an online website where owners can rent their p
 |--|--|
 |  Tanjim Reza|20101065  |
 |  Raihanul Islam Bhuiyan |2010****  |
-|  Mahin Shahriar Efaz |2010****  |
+|  Mahin Shahriar Efaz aka Ozer007|2010****  |
 |  Aditi Saha Ria |2010****  |
 
 ## Setup Instructions 
