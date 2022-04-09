@@ -23,7 +23,7 @@ def userlogin(request):
     user = authenticate(request, username=username, password=password)
     print(user)
     if user is not None:
-        login(request, user)
+        login(request, user,backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'User logged in successfully')
         return redirect('home')
     else: 
@@ -40,15 +40,20 @@ def userlogin(request):
     #         return redirect('/')
     # context = {'form': form}
 def userlogout(request):
-    logout(request,User)
-    return redirect('home',context={'context': ['a','b','c']})
+    logout(request)
+    context = {'context': 'Logged out successfully'}
+    return redirect('home')
 
 def signup(request):
     form = CustomUserForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            print("userpass:",user.password)
+            user.set_password(user.password)
+            user.save()
+            login(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
             return redirect('/')
     context = {'form': form}
