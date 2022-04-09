@@ -50,8 +50,8 @@ def signup(request):
         print(request.POST)
         if form.is_valid():
             user = form.save()
-            print("userpass:",user.password)
-            user.set_password(user.password)
+            # print("userpass:",user.password)
+            user.set_password(request.POST.get('password'))
             user.save()
             login(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
