@@ -53,17 +53,17 @@
                                         </h3>
                                     </a> {% endcomment %}
 
-                                </div>
+                                </div> <br> <br> <br>
                             </div>
                             <div>
                                 <form action="" class="signin-form" method="POST">
                                     {% csrf_token %}
-                                    <div class="form-group mt-3">
+                                    {% comment %} <div class="form-group mt-3"> {% endcomment %}
                                         {% comment %} <input type="text" class="form-control" required> {% endcomment %}
-                                        <input type="text" class="form-control" name="first_name" maxlength="150"
+                                        {% comment %} <input type="text" class="form-control" name="first_name" maxlength="150"
                                             id="id_first_name" required>
                                         <label class="form-control-placeholder" for="id_first_name">First Name</label>
-                                    </div>
+                                    </div> {% endcomment %}
                                     <div class="form-group">
                                         <input id="id_email" class="form-control" type="text" name="email"
                                             maxlength="200" required>
