@@ -129,7 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ###! ADDED
 
-AUTH_USER_MODEL = 'home.CustomUser'
+AUTH_USER_MODEL = 'home.Users'
 # AUTHENTICATION_BACKENDS = (
 #     'django.contrib.auth.backends.AllowAllUsersModelBackend',
 #     'home.backend.CaseInsensitiveModelBackend',

@@ -1,29 +1,27 @@
-from collections import UserList
-from email import contentmanager
+
 import re
 from django.shortcuts import redirect, render
-from .forms import CustomUserForm
-from .models import CustomUser
+from .forms import UserForm, SpotOwnerForm, RenteeForm
+from .models import Users, ParkingSlots, Rentee, Rentee_Reviews_ParkingSlots, SpotOwner
 from django.contrib.auth import authenticate,login, logout
-from django.contrib.auth.models import User
 from django.contrib import messages
 # Create your views here.
 
 def home(request):
-    UserList = CustomUser.objects.values()
+    UserList = Users.objects.values()
     context = {'context': UserList}
     return render(request, 'home/home.html',context=context)
 
 def userlogin(request):
     if request.user.is_authenticated:
-        print('Authenticated User:', request.user.username)
+        print('Authenticated User:', request.user.nid)
     print(request.POST)
-    username = request.POST.get('username')
+    nid = request.POST.get('nid')
     password = request.POST.get('password')
-    user = authenticate(request, username=username, password=password)
+    user = authenticate(request, nid=nid, password=password)
     print(user)
     if user is not None:
-        login(request, user,backend='django.contrib.auth.backends.ModelBackend')
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'User logged in successfully')
         return redirect('home')
     else: 
@@ -45,27 +43,52 @@ def userlogout(request):
     return redirect('home')
 
 def signup(request):
-    form = CustomUserForm(request.POST)
+    form = UserForm(request.POST)
+    print("Errors",form.errors)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
             user = form.save()
-            # print("userpass:",user.password)
             user.set_password(request.POST.get('password'))
             user.save()
             login(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
             return redirect('/')
+        else: 
+            print("Form invalid")
     context = {'form': form}
     return render(request, 'home/signup.html',context=context)
 
 def testlogin(request):
-    form = CustomUserForm(request.POST)
+    form = UserForm(request.POST)
+    form2 = SpotOwnerForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            user.set_password(request.POST.get('password'))
+            user.save()
             messages.success(request, 'User created successfully')
             return redirect('/')
-    context = {'form': form}
+        else: 
+            print("Form invalid")
+    if request.method == 'POST':
+        print(request.POST)
+        if form2.is_valid():
+            form2.save()      
+            messages.success(request, 'Spot Created')
+            return redirect('/spots')
+        else: 
+            print("Form invalid")
+    context = {'form': [form,form2]}
+    print(context)
     return render(request, 'home/test_login.html',context=context)
+def testLogin(request):
+    
+
+
+def spots(request):
+    spots = SpotOwner.objects.filter(nid=request.user)
+    print(spots)
+    context = {'spots': spots}
+    return render(request, 'home/spots.html',context=context)
