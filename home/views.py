@@ -8,6 +8,7 @@ from django.contrib import messages
 # Create your views here.
 
 def home(request):
+    print(request.user.is_authenticated)
     UserList = Users.objects.values()
     context = {'context': UserList}
     return render(request, 'home/home.html',context=context)
@@ -51,6 +52,9 @@ def signup(request):
             user = form.save()
             user.set_password(request.POST.get('password'))
             user.save()
+            nid = request.POST.get('nid')
+            password = request.POST.get('password')
+            user = authenticate(request, nid=nid, password=password)
             login(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
             return redirect('/')
@@ -83,7 +87,6 @@ def testlogin(request):
     context = {'form': [form,form2]}
     print(context)
     return render(request, 'home/test_login.html',context=context)
-def testLogin(request):
     
 
 
