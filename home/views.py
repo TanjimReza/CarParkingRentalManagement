@@ -7,6 +7,10 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
 # Create your views here.
 
+def index(request):
+    context = {}
+    return render(request, 'home/index.html',context= context)
+
 def home(request):
     print(request.user.is_authenticated)
     UserList = Users.objects.values()
