@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ri59oolqamb1qh$3yhbrr0jq&&aoz=bz@n#!zb4fslla2ss+v2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tanjimcse370.herokuapp.com']
+ALLOWED_HOSTS = ['tanjimparking.herokuapp.com','https://tanjimparking.herokuapp.com/']
 
 
 # Application definition
@@ -142,4 +142,3 @@ AUTH_USER_MODEL = 'home.Users'
 #     'django.contrib.auth.backends.ModelBackend',
 # )
 
-django_heroku.settings(locals())
