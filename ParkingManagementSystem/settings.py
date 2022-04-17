@@ -141,3 +141,5 @@ AUTH_USER_MODEL = 'home.Users'
 #     'home.backend.CaseInsensitiveModelBackend',
 #     'django.contrib.auth.backends.ModelBackend',
 # )
+
+django_heroku.settings(locals())
