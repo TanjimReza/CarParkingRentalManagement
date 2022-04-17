@@ -81,14 +81,25 @@ WSGI_APPLICATION = 'ParkingManagementSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lab_test',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'tanjimre_lab_test',
+        'USER': 'tanjimre_tanjim',
+        'PASSWORD': 'd2Mw@TEJjcin2Ge',
+        'HOST': 'clients.cmsngroup.com.au',
+        #'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'lab_test',
+    #     'USER': 'root',
+    #     'PASSWORD': '',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    # }
 }
-
+#  database= 'tanjimre_lab_test',
+#   host="clients.cmsngroup.com.au",
+#   user="tanjimre_tanjim",
+#   password="d2Mw@TEJjcin2Ge"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -133,7 +144,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ###! ADDED
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 AUTH_USER_MODEL = 'home.Users'
 # AUTHENTICATION_BACKENDS = (
