@@ -56,7 +56,7 @@ def signup(request):
             nid = request.POST.get('nid')
             password = request.POST.get('password')
             user = authenticate(request, nid=nid, password=password)
-            login(request,user,backend='django.contrib.auth.backends.ModelBackend')
+            auth_login(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
             return redirect('/')
         else: 
@@ -68,8 +68,6 @@ def testlogin(request):
     form = UserForm(request.POST)
     # form = PaymentForm(request.POST)
     form2 = SpotOwnerForm(request.POST)
-    form3 = EngineForm(request.POST)
-    form4 = FuelTypeForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
@@ -80,22 +78,6 @@ def testlogin(request):
                 user.save()
                 messages.success(request, 'User created successfully')
                 return redirect('/testlogin')
-        else: 
-            print("Form invalid")
-    if request.method == 'POST':
-        print(request.POST)
-        if form4.is_valid():
-            form4.save()      
-            messages.success(request, 'Spot Created')
-            return redirect('/spots')
-        else: 
-            print("Form invalid")
-    if request.method == 'POST':
-        print(request.POST)
-        if form3.is_valid():
-            form3.save()      
-            messages.success(request, 'Spot Created')
-            return redirect('/test_login')
         else: 
             print("Form invalid")
     context = {'form': form}
