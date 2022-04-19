@@ -79,22 +79,22 @@ WSGI_APPLICATION = 'ParkingManagementSystem.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tanjimre_lab_test',
-        'USER': 'tanjimre_tanjim',
-        'PASSWORD': 'd2Mw@TEJjcin2Ge',
-        'HOST': 'clients.cmsngroup.com.au',
-        #'PORT': '3306',
-    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'lab_test',
-    #     'USER': 'root',
-    #     'PASSWORD': '',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
+    #     'NAME': 'tanjimre_lab_test',
+    #     'USER': 'tanjimre_tanjim',
+    #     'PASSWORD': 'd2Mw@TEJjcin2Ge',
+    #     'HOST': 'clients.cmsngroup.com.au',
+    #     #'PORT': '3306',
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lab_test',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
 }
 #  database= 'tanjimre_lab_test',
 #   host="clients.cmsngroup.com.au",

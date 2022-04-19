@@ -38,7 +38,7 @@
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <a href="{% url 'userlogin'%}"><button type="button"
+                                    <a href="{% url 'login'%}"><button type="button"
                                             class="btn btn-outline-primary btn-lg">⠀⠀⠀Login⠀⠀⠀</button></a>
                                 </div>
                                 <div class="w-100">
@@ -46,11 +46,11 @@
                                             class="btn btn-outline-warning btn-lg">⠀⠀⠀Sign up⠀⠀⠀</button></a>
 
                                 </div>
-                                <div class="w-100">
+                                {% comment %} <div class="w-100">
                                     <a href="{% url 'userlogout'%}"><button type="button"
                                             class="btn btn-outline-warning btn-lg">⠀⠀⠀Logout⠀⠀⠀</button></a>
 
-                                </div>
+                                </div> {% endcomment %}
                                 <br><br><br>
                             </div>
                             <!--Start: Login Page -->
