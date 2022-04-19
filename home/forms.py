@@ -25,7 +25,7 @@ class FuelTypeForm(ModelForm):
     class Meta:
         model = FuelType
         fields = '__all__'
-# class PaymentForm(ModelForm):
-#     class Meta:
-#         model = Payment
-#         fields = '__all__'
+class PaymentForm(ModelForm):
+    class Meta:
+        model = Payment
+        fields = '__all__'
