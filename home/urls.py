@@ -24,4 +24,7 @@ urlpatterns = [
    path('userlogout/', views.userlogout, name='userlogout'),
    path('spots/',views.spots, name='spots'),
    path('index/',views.index, name='index'),
+   path('dashboard/',views.dashboard, name='dashboard'),
+   path('sidebar/',views.sidebar, name='sidebar'),
+   path('bookslot/',views.bookslot, name='bookslot'),
 ]

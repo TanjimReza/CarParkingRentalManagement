@@ -1,8 +1,8 @@
 
 import re
 from django.shortcuts import redirect, render
-from .forms import UserForm, SpotOwnerForm, RenteeForm
-from .models import Users, ParkingSlots, Rentee, Rentee_Reviews_ParkingSlots, SpotOwner
+from .forms import *
+from .models import *
 from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
 # Create your views here.
@@ -28,7 +28,8 @@ def userlogin(request):
     if user is not None:
         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'User logged in successfully')
-        return redirect('home')
+        # return redirect('home')
+        return redirect('dashboard')
     else: 
         messages.error(request, 'Invalid credentials')
         return render(request, 'home/userlogin.html',context={})
@@ -69,7 +70,7 @@ def signup(request):
 
 def testlogin(request):
     form = UserForm(request.POST)
-    form2 = SpotOwnerForm(request.POST)
+    # form = SpotOwnerForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
@@ -80,22 +81,25 @@ def testlogin(request):
             return redirect('/')
         else: 
             print("Form invalid")
-    if request.method == 'POST':
-        print(request.POST)
-        if form2.is_valid():
-            form2.save()      
-            messages.success(request, 'Spot Created')
-            return redirect('/spots')
-        else: 
-            print("Form invalid")
-    context = {'form': [form,form2]}
+    context = {'form': form}
     print(context)
     return render(request, 'home/test_login.html',context=context)
     
-
 
 def spots(request):
     spots = SpotOwner.objects.filter(nid=request.user)
     print(spots)
     context = {'spots': spots}
     return render(request, 'home/spots.html',context=context)
+
+def dashboard(request):
+    if request.user.is_authenticated:
+        return render(request,'home/dashboard.html')
+    else:
+        messages.error(request,"You need to login first!")
+        return redirect(userlogin)
+def sidebar(request):
+    return render(request, 'home/sidebar.html')
+
+def bookslot(request):
+    return render(request, 'home/bookslot.html')

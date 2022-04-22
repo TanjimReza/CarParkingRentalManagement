@@ -7,10 +7,7 @@ class UserForm(ModelForm):
         model = Users
         fields = '__all__'
 
-class SpotOwnerForm(ModelForm):
-    class Meta:
-        model = SpotOwner
-        fields = '__all__'
+
 class RenteeForm(ModelForm):
     class Meta:
         model = Rentee
