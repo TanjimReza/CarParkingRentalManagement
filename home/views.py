@@ -49,7 +49,11 @@ def userlogout(request):
     return redirect('home')
 
 def signup(request):
-    form = UserForm(request.POST)
+    if request.POST.get('is_spot_owner') =="S":
+        form = OwnerForm(request.POST)
+    else: 
+        form = RenteeForm(request.POST)
+    print(request.POST)
     print("Errors",form.errors)
     if request.method == 'POST':
         print(request.POST)
@@ -78,6 +82,11 @@ def testlogin(request):
             user.set_password(request.POST.get('password'))
             user.save()
             messages.success(request, 'User created successfully')
+            user_type = request.POST.get('is_spot_owner')
+            print("USERTYPE",user_type)
+            if user_type == "S":
+                usertype = SpotOwner(nid=user)
+                usertype.save()             
             return redirect('/')
         else: 
             print("Form invalid")

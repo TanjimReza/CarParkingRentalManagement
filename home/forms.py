@@ -1,12 +1,17 @@
 import email
 from django.forms import ModelForm
-from .models import Users, ParkingSlots, Rentee, Rentee_Reviews_ParkingSlots, SpotOwner
+from .models import *
 
 class UserForm(ModelForm):
     class Meta: 
         model = Users
         fields = '__all__'
 
+
+class OwnerForm(ModelForm):
+    class Meta:
+        model = SpotOwner
+        fields = '__all__'
 
 class RenteeForm(ModelForm):
     class Meta:

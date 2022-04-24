@@ -1,106 +1,236 @@
-
 {% load static %}
 <!doctype html>
 <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg">
-{% include 'head.html' %}
-{% include 'base-sidebar.html' %}
-<body>
-    <!-- Begin page -->
-    <body>
 
-        <div class="auth-page-wrapper pt-5">
-            <!-- auth page bg -->
-            <div class="auth-one-bg-position auth-one-bg"  id="auth-particles">
-                <div class="bg-overlay"></div>
-                
-                <div class="shape">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 120">
-                        <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
-                    </svg>
+<head>
+
+    <meta charset="utf-8" />
+    <title>TEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'dassets/images/favicon.ico' %}">
+
+    <!-- multi.js css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'dassets/libs/multi.js/multi.min.css' %}" />
+    <!-- autocomplete css -->
+    <link rel="stylesheet" href="{% static 'dassets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css' %}">
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="{% static 'dassets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="{% static 'dassets/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="{% static 'dassets/css/app.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="{% static 'dassets/css/custom.min.css' %}" rel="stylesheet" type="text/css" />
+
+
+</head>
+<div class="main-content">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0">Book a slot</h4>
+
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                <li class="breadcrumb-item active">BookSlot</li>
+                            </ol>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+            <!-- end page title -->
 
-            <!-- auth page content -->
-            <div class="auth-page-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center mt-sm-5 mb-4 text-white-50">
-                                <div>
-                                    <a href="index.html" class="d-inline-block auth-logo">
-                                        <img src="assets/images/logo-light.png" alt="" height="20">
-                                    </a>
-                                </div>
-                                <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end row -->
+            <div class="row">
+                <div class="col">
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 col-xl-5">
-                            <div class="card mt-4">
-                                <div class="card-body p-4 text-center"> 
-                                    <div class="avatar-lg mx-auto mt-2">
-                                        <div class="avatar-title bg-light text-success display-3 rounded-circle">
-                                            <i class="ri-checkbox-circle-fill"></i>
-                                        </div>
+                    <div class="h-100">
+                        <div class="row mb-3 pb-1">
+                            <div class="col-12">
+                                <div class="d-flex align-items-lg-center flex-lg-row flex-column">
+                                    <div class="flex-grow-1">
+                                        <h4 class="fs-16 mb-1">You can book a slot from here</h4>
+                                        <p class="text-muted mb-0">Find a slot and make sure you have enough credit</p>
                                     </div>
-                                    <div class="mt-4 pt-2">
-                                        <h4>Well done !</h4>
-                                        <p class="text-muted mx-4">Aww yeah, you successfully read this important message.</p>
-                                        <div class="mt-4">
-                                            <a href="auth-signin-basic.html" class="btn btn-success w-100">Back to Dashboard</a>
-                                        </div>
+                                    <div class="mt-3 mt-lg-0">
+                                        <form action="javascript:void(0);">
+                                            <div class="row g-3 mb-0 align-items-center">
+                                                <div class="col-sm-auto">
+                                                    <div class="input-group">
+                                                        <input type="text"
+                                                            class="form-control border-0 dash-filter-picker shadow"
+                                                            data-provider="flatpickr" data-range-date="true"
+                                                            data-date-format="d M, Y"
+                                                            data-deafult-date="01 Jan 2022 to 31 Jan 2022">
+                                                        <div
+                                                            class="input-group-text bg-primary border-primary text-white">
+                                                            <i class="ri-calendar-2-line"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-auto">
+                                                    <button type="button" class="btn btn-soft-success"><i
+                                                            class="ri-add-circle-line align-middle me-1"></i>
+                                                        Add Product</button>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-auto">
+                                                    <button type="button"
+                                                        class="btn btn-soft-info btn-icon waves-effect waves-light layout-rightside-btn"><i
+                                                            class="ri-pulse-line"></i></button>
+                                                </div>
+                                                <!--end col-->
+                                            </div>
+                                            <!--end row-->
+                                        </form>
                                     </div>
-                                </div>
-                                <!-- end card body -->
+                                </div><!-- end card header -->
                             </div>
-                            <!-- end card -->
-
+                            <!--end col-->
                         </div>
-                    </div>
-                    <!-- end row -->
-                </div>
-                <!-- end container -->
+                        <!--end row-->
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title mb-0">Multi Select</h4>
+                                    </div><!-- end card header -->
+
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div>
+                                                    <h5 class="fs-14 mb-1">Basic Example</h5>
+                                                    <p class="text-muted">Example of Multi Select Basic </p>
+                                                    <form>
+                                                        <select required multiple="multiple" name="favorite_fruits"
+                                                            id="multiselect-basic">
+                                                            <option selected>Apple</option>
+                                                            <option>Banana</option>
+                                                            <option selected>Blueberry</option>
+                                                            <option selected>Cherry</option>
+                                                            <option>Coconut</option>
+                                                            <option>Grapefruit</option>
+                                                            <option>Kiwi</option>
+                                                            <option>Lemon</option>
+                                                            <option>Lime</option>
+                                                            <option>Mango</option>
+                                                            <option>Orange</option>
+                                                            <option>Papaya</option>
+                                                        </select>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- end col -->
+
+                                            <div class="col-lg-6">
+                                                <div class="mt-4 mt-lg-0">
+                                                    <h5 class="fs-14 mb-1">Headers</h5>
+                                                    <p class="text-muted">Example of Multi Select Headers </p>
+                                                    <form>
+                                                        <select required multiple="multiple" name="favorite_cars"
+                                                            id="multiselect-header">
+                                                            <option>Chevrolet</option>
+                                                            <option>Fiat</option>
+                                                            <option>Ford</option>
+                                                            <option>Honda</option>
+                                                            <option selected>Hyundai</option>
+                                                            <option>Kia</option>
+                                                            <option>Mahindra</option>
+                                                            <option>Maruti</option>
+                                                            <option>Mitsubishi</option>
+                                                            <option>MG</option>
+                                                            <option>Nissan</option>
+                                                            <option>Renault</option>
+                                                            <option selected>Skoda</option>
+                                                            <option selected>Tata</option>
+                                                            <option selected>Toyato</option>
+                                                            <option>Volkswagen</option>
+                                                        </select>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mt-4">
+                                                    <h5 class="fs-14 mb-1">Option Groups</h5>
+                                                    <p class="text-muted">Example of Multi Select Option Groups</p>
+                                                    <form>
+                                                        <select multiple="multiple" name="favorite_cars"
+                                                            id="multiselect-optiongroup">
+                                                            <optgroup label="Skoda">
+                                                                <option>Kushaq</option>
+                                                                <option>Superb</option>
+                                                                <option>Octavia</option>
+                                                                <option>Rapid</option>
+                                                            </optgroup>
+                                                            <optgroup label="Volkswagen">
+                                                                <option>Polo</option>
+                                                                <option>Taigun</option>
+                                                                <option>Vento</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+                                    </div><!-- end card-body -->
+                                </div><!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div> <!-- end .h-100-->
+
+                </div> <!-- end col -->
+
             </div>
-            <!-- end auth page content -->
 
-            <!-- footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <p class="mb-0 text-muted">&copy; <script>document.write(new Date().getFullYear())</script> Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- end Footer -->
         </div>
-        <!-- end auth-page-wrapper -->
+        <!-- container-fluid -->
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="{% static 'dassets/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'dassets/libs/simplebar/simplebar.min.js' %}"></script>
+    <script src="{% static 'dassets/libs/node-waves/waves.min.js' %}"></script>
+    <script src="{% static 'dassets/libs/feather-icons/feather.min.js' %}"></script>
+    <script src="{% static 'dassets/js/pages/plugins/lord-icon-2.1.0.js' %}"></script>
+    <script src="{% static 'dassets/js/plugins.js"></script>
+                        
+                                <!-- multi.js -->
+                                <script src="{% static 'dassets/libs/multi.js/multi.min.js' %}"></script>
+    <!-- autocomplete js -->
+    <script src="{% static 'dassets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js' %}"></script>
 
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-        <script src="assets/js/plugins.js"></script>
+    <!-- init js -->
+    <script src="{% static 'dassets/js/pages/form-advanced.init.js' %}"></script>
+    <!-- input spin init -->
+    <script src="{% static 'dassets/js/pages/form-input-spin.init.js' %}"></script>
 
-        <!-- particles js -->
-        <script src="assets/libs/particles.js/particles.js"></script>
-        <!-- particles app js -->
-        <script src="assets/js/pages/particles.app.js"></script>
-        <!-- password-addon init -->
-        <script src="assets/js/pages/password-addon.init.js"></script>
+    <!-- App js -->
+    <script src="{% static 'dassets/js/app.js' %}"></script>
+
     </body>
-
-
-    {% include 'javascripts.html' %}
-
-</body>
 
 </html>

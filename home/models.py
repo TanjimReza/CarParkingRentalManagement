@@ -1,9 +1,10 @@
 from importlib.abc import Traversable
 import django
+from django.contrib.auth.models import (AbstractBaseUser, AbstractUser,
+                                      BaseUserManager)
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, AbstractUser
-# Create your models here.
-import datetime
+
+
 class UsersManager(BaseUserManager):
     def create_user(self, nid, password=None):
         if not nid:
@@ -14,7 +15,7 @@ class UsersManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
         return user
-
+    
 class Users(AbstractBaseUser):
     user_type = (
         ('R', 'Rentee'),
@@ -26,16 +27,15 @@ class Users(AbstractBaseUser):
     password = models.CharField(max_length=128)
     contact = models.CharField(max_length=15, null=True)
     last_login = models.DateTimeField(auto_now_add=True, null=True)
-    is_owner = models.CharField(max_length=10, choices=user_type,default='user')
+    is_spot_owner = models.CharField(max_length=10, choices=user_type,default='user')
     USERNAME_FIELD = 'nid'
     objects = UsersManager()
     def __str__(self):
         return self.nid
 
 class SpotOwner(models.Model):
-    nid = models.ForeignKey(Users, on_delete=models.CASCADE)
-    owner_info = models.CharField(max_length=200)
-    
+    nid = models.OneToOneField(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
+    is_spot_owner = models.CharField(max_length=10, choices=Users.user_type,default='user')
     def __str__(self) -> str:
         return self.nid.nid
     
@@ -52,7 +52,7 @@ class ParkingSlots(models.Model):
     house = models.CharField(max_length=200)
     area = models.CharField(max_length=200)
     street = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
+#     city = models.CharField(max_length=200)
     
     def __str__(self) -> str:
         return self.slot_id
@@ -66,3 +66,5 @@ class Rentee_Reviews_ParkingSlots(models.Model):
     slot_id = models.ForeignKey(ParkingSlots, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
     rating = models.CharField(max_length=200)
+
+
