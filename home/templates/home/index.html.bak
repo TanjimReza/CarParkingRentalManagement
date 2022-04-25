@@ -5,21 +5,21 @@
 {% comment %} {% static 'css/style.css' %} {% endcomment %}
 <head>
     <meta charset="UTF-8">
-    <title>EzPark Main | One Page</title>
+    <title>SaaSio Main | One Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{% static 'assets/img/fv.png" type="image/x-icon' %}">
-    <link rel="icon" href="{% static 'assets/img/fv.png" type="image/x-icon' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/newfont.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/swiper.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/jquery.bxslider.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/odometer-theme-default.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static '"{% static 'assets/img/fv.png' %}" type="image/x-icon' %}">
+    <link rel="icon" href="{% static '"{% static 'assets/img/fv.png' %}" type="image/x-icon' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/bootstrap.min.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/animate.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/newfont.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/owl.carousel.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/fontawesome-all.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/swiper.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/jquery.bxslider.min.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/jquery.mCustomScrollbar.min.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/odometer-theme-default.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/flaticon.css' %}' %}">
+    <link rel="stylesheet" href="{% static '"{% static 'assets/css/style.css' %}' %}">
 </head>
 
 <body class="app-eight-home" data-spy="scroll" data-target=".navigation-eight" data-offset="80">
@@ -33,6 +33,7 @@
         <header id="header-eight" class="main-header-eight">
             <div class="appheader-content">
                 <div class="site-logo float-left">
+                    <a href="#"><img src="{% static '"{% static 'assets/img/app-landing/logo/logo1.png' %}' %}" alt=""></a>
                 </div>
                 <nav class="navigation-eight ul-li saasio_one_click">
                     <ul>
@@ -53,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="sign-up-btn-eight text-center float-right clearfix">
-                    <a href="{% url 'login' %}">sign In</a>
+                    <a href="#">sign In</a>
                 </div>
             </div>
             <!-- /desktop-menu -->
@@ -68,7 +69,7 @@
                             <i class="far fa-times-circle"></i>
                         </div>
                         <div class="m-brand-logo text-center">
-                            <img src="{% static 'assets/img/app-landing/logo/f-logo.png' %}" alt="">
+                            <img src="{% static '"{% static 'assets/img/app-landing/logo/f-logo.png' %}' %}" alt="">
                         </div>
                         <nav class="appi-ei-mobile-main-navigation saasio_one_click  clearfix ul-li">
                             <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
@@ -98,19 +99,18 @@
                         <div class="eight-banner-content">
                             <div class="banner-content-box appeight-headline pera-content">
                                 <h1 class="cd-headline clip is-full-width">
-                                    First Time in Bangladesh!
+                                    The new website
+                                    for
                                     <span class="cd-words-wrapper">
-                                        <b class="is-visible">Online Parking System</b>
-                                        <b>Rent your Spot</b>
-                                        <b>Look for Spot</b>
-                                        <b>All in one place!</b>
+                                        <b class="is-visible">app landing</b>
+                                        <b>showcase</b>
+                                        <b>screenshoot</b>
                                     </span>
                                 </h1>
-                                <P>EzPark is the best solution for parking your vehicle </P>
+                                <P>SaaSio is the best software platform for running an internet business. </P>
                                 <div class="ei-banner-btn">
-                                    <a href="{% url 'signup' %}"><i class="fas fa-power-off"></i> Get started!</a>
-                                    {% comment %} <a href="{% url 'signup' %}"><i class="fas fa-power-off"></i> Get started!</a> {% endcomment %}
-                                    <a href="{% url 'login' %}"><span>or</span> Log in now!</a>
+                                    <a href="#"><i class="fas fa-power-off"></i> Start Now</a>
+                                    <a href="#"><span>or</span> try it for free</a>
                                 </div>
                                 <div class="ei-banner-review pera-content ul-li">
                                     <ul>
@@ -120,11 +120,11 @@
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                     </ul>
-                                    <p>(based on <span>1,256 </span> reviews)</p>
+                                    <p>(based on <span>1,256 task</span> reviews)</p>
                                 </div>
                             </div>
                             <div class="ei-banner-mbl-mockup wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                {% comment %} <img src="{% static 'assets/img/app-landing/mockup/bm1.png' %}" alt=""> {% endcomment %}
+                                {% comment %} <img src="{% static '"{% static 'assets/img/app-landing/mockup/bm1.png' %}' %}" alt=""> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -132,13 +132,13 @@
             </div>
             <div class="waveWrapper waveAnimation">
                 <div class="waveWrapperInner bgTop">
-                    <div class="wave waveTop" style="background-image: url({% static 'assets/img/app-landing/shape/b-shapeup.png'%})"></div>
+                    <div class="wave waveTop" style="background-image: url({% static '"{% static 'assets/img/app-landing/shape/b-shapeup.png' %}'%})"></div>
                 </div>
                 <div class="waveWrapperInner bgMiddle">
-                    <div class="wave waveMiddle" style="background-image: url({% static 'assets/img/app-landing/shape/b-shapemiddle.png' %})"></div>
+                    <div class="wave waveMiddle" style="background-image: url({% static '"{% static 'assets/img/app-landing/shape/b-shapemiddle.png' %}' %})"></div>
                 </div>
                 <div class="waveWrapperInner bgBottom">
-                    <div class="wave waveBottom" style="background-image: url({% static 'assets/img/app-landing/shape/b-shapemiddle.png' %})"></div>
+                    <div class="wave waveBottom" style="background-image: url({% static '"{% static 'assets/img/app-landing/shape/b-shapemiddle.png' %}' %})"></div>
                 </div>
             </div>
         </section>
@@ -154,8 +154,8 @@
                         Fetaured services <i class="square-shape"><i></i><i></i> <i></i> <i></i> </i>
                     </span>
                     <h2>Why you will choose
-                        <span>EzPark?</span></h2>
-                        <p>We provide easy parking solutions throughout whole Dhaka city and expanding more! You can book your parking slots at anytime, from anywhere. We provide bonus parking hours too!</p>
+                        <span>our software?</span></h2>
+                        <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                     </div>
                     <!-- /title -->
 
@@ -168,8 +168,8 @@
                                         <span class="ei-icon-bg"></span>
                                     </div>
                                     <div class="feature-text8 appeight-headline pera-content">
-                                        <h3>Car Parking</h3>
-                                        <p>Find Parking spot for your car through us! </p>
+                                        <h3>Branding</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
                                     </div>
                                     <div class="ei-feature-more">
                                         <a href="#"><i class="fas fa-plus"></i></a>
@@ -183,8 +183,8 @@
                                         <span class="ei-icon-bg"></span>
                                     </div>
                                     <div class="feature-text8 appeight-headline pera-content">
-                                        <h3>Motor Cycle Parking</h3>
-                                        <p>Find Parking spot for your motor cycle through us! </p>
+                                        <h3>Web Design</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
                                     </div>
                                     <div class="ei-feature-more">
                                         <a href="#"><i class="fas fa-plus"></i></a>
@@ -198,8 +198,8 @@
                                         <span class="ei-icon-bg"></span>
                                     </div>
                                     <div class="feature-text8 appeight-headline pera-content">
-                                        <h3>Cycle Parking</h3>
-                                        <p>Find Parking spot for your cycle through us! </p>
+                                        <h3>UI/UX Design</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
                                     </div>
                                     <div class="ei-feature-more">
                                         <a href="#"><i class="fas fa-plus"></i></a>
@@ -213,8 +213,8 @@
                                         <span class="ei-icon-bg"></span>
                                     </div>
                                     <div class="feature-text8 appeight-headline pera-content">
-                                        <h3>Rent parking slot.</h3>
-                                        <p>Earn some extra money through your free parking slot! </p>
+                                        <h3>Web Development</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
                                     </div>
                                     <div class="ei-feature-more">
                                         <a href="#"><i class="fas fa-plus"></i></a>
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ei-feature-shape"><img src="{% static 'assets/img/app-landing/shape/f-shape1.png' %}" alt=""></div>
+                <div class="ei-feature-shape"><img src="{% static '"{% static 'assets/img/app-landing/shape/f-shape1.png' %}' %}" alt=""></div>
             </section>
     <!-- End of Featured section
         ============================================= --> 
@@ -242,8 +242,8 @@
                                         <i class="flaticon-bug"></i>
                                     </div>
                                     <div class="ei-service-text">
-                                        <h3>Hassle free</h3>
-                                       
+                                        <h3>Bug free</h3>
+                                        <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                                     </div>
                                 </div>
                             </a>
@@ -255,7 +255,7 @@
                                     </div>
                                     <div class="ei-service-text">
                                         <h3>Well Organized</h3>
-                                       
+                                        <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                                     </div>
                                 </div>
                             </a>
@@ -266,8 +266,8 @@
                                         <i class="flaticon-web-development"></i>
                                     </div>
                                     <div class="ei-service-text">
-                                        <h3>Security</h3>
-                                        
+                                        <h3>Clean coding</h3>
+                                        <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                                     </div>
                                 </div>
                             </a>
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 {% comment %} <div class="eight-service-text position-relative appeight-headline wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <div class="ei-service-slide-mbl" data-background="{% static 'assets/img/app-landing/mockup/smu1.png' %}">
+                    <div class="ei-service-slide-mbl" data-background="{% static '"{% static 'assets/img/app-landing/mockup/smu1.png' %}' %}">
                         <div class="slide-inner">
                             <div class="ei-service-slide">
                                 <div class="slide-item">
@@ -307,28 +307,28 @@
                     app?</h2>
                 </div> {% endcomment %}
             </div>
-            <div class="s-shape-bg1" data-parallax='{"x" : -70}'><img src="{% static 'assets/img/app-landing/shape/s-shape3.png' %}" alt=""></div>
-            <div class="s-shape-bg2 text-center"><img src="{% static 'assets/img/app-landing/shape/s-shape4.png' %}" alt=""></div>
+            <div class="s-shape-bg1" data-parallax='{"x" : -70}'><img src="{% static '"{% static 'assets/img/app-landing/shape/s-shape3.png' %}' %}" alt=""></div>
+            <div class="s-shape-bg2 text-center"><img src="{% static '"{% static 'assets/img/app-landing/shape/s-shape4.png' %}' %}" alt=""></div>
         </section>
-        <br><br>
-
     <!-- End of service  section
         ============================================= -->
 
 
     <!-- Start of Fun fact   section
         ============================================= -->
-        {% comment %} <section id="fun-fact" class="eg-fun-fact-section position-relative">
+        <section id="fun-fact" class="eg-fun-fact-section position-relative">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="eg-funfact-content clearfix position-relative">
                             <div class="eg-fun-fact-mockup wow fadeFromLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                
-                                <div class="fn-shape fn-shape-item1" data-parallax='{"y" : 50}'><img src="{% static 'assets/img/app-landing/mockup/fmu2.png' %}" alt=""></div>
-                                <div class="fn-shape fn-shape-item2" data-parallax='{"y" : 60}'><img src="{% static 'assets/img/app-landing/mockup/fmu3.png' %}" alt=""></div>
-                                <div class="fn-shape fn-shape-item3" data-parallax='{"x" : -50}'><img src="{% static 'assets/img/app-landing/shape/fc1.png' %}" alt=""></div>
-                                <div class="fn-shape fn-shape-item4" data-parallax='{"x" : -40}'><img src="{% static 'assets/img/app-landing/shape/fc2.png' %}" alt=""></div>
+                                <div class="main-mockup">
+                                    <img src="{% static '"{% static 'assets/img/app-landing/mockup/fmu1.png' %}' %}" alt="">
+                                </div>
+                                <div class="fn-shape fn-shape-item1" data-parallax='{"y" : 50}'><img src="{% static '"{% static 'assets/img/app-landing/mockup/fmu2.png' %}' %}" alt=""></div>
+                                <div class="fn-shape fn-shape-item2" data-parallax='{"y" : 60}'><img src="{% static '"{% static 'assets/img/app-landing/mockup/fmu3.png' %}' %}" alt=""></div>
+                                <div class="fn-shape fn-shape-item3" data-parallax='{"x" : -50}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fc1.png' %}' %}" alt=""></div>
+                                <div class="fn-shape fn-shape-item4" data-parallax='{"x" : -40}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fc2.png' %}' %}" alt=""></div>
                             </div>
                             <div class="eg-funfact-text float-right wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="eight-section-title appeight-headline pera-content text-left">
@@ -336,7 +336,7 @@
                                         <i class="square-shape"><i></i><i></i><i></i><i></i></i></span>
                                         <h2>We have some awesome
                                             <span>funfacts for clients.</span></h2>
-                                            <p>You can earn extra credit hours if you buy 5 credit hours together!</p>
+                                            <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                                         </div>
                                         <!-- /title -->
                                         <div class="fun-fact-counter position-relative clearfix">
@@ -366,15 +366,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fn-bg-shape position-absolute"><img src="{% static 'assets/img/app-landing/shape/fns1.png' %}" alt=""></div>
-                </section> {% endcomment %}
+                    <div class="fn-bg-shape position-absolute"><img src="{% static '"{% static 'assets/img/app-landing/shape/fns1.png' %}' %}" alt=""></div>
+                </section>
     <!-- End of Fun fact  section
         ============================================= --> 
 
     <!-- Start of How work  section
         ============================================= -->
         <section id="eg-how-work" class="eg-how-work-section position-relative">
-            <div class="how-work-bg-shape position-absolute"><img src="{% static 'assets/img/app-landing/shape/hws.png' %}" alt=""></div>
+            <div class="how-work-bg-shape position-absolute"><img src="{% static '"{% static 'assets/img/app-landing/shape/hws.png' %}' %}" alt=""></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
@@ -396,8 +396,8 @@
                                             <i class="flaticon-verified-user"></i>
                                         </div>
                                         <div class="eg-how-work-text appeight-headline pera-content">
-                                            <h3>Sign up </h3>
-                                            <p>You can sign up as a Rentee or an owner or both at the same time!</p>
+                                            <h3>Make a profile</h3>
+                                            <p>As a app web crawler expert, I help organizations adjusting.</p>
                                         </div>
                                     </div>
                                     <div class="eg-how-work-icon-text position-relative">
@@ -406,8 +406,8 @@
                                             <i class="flaticon-download"></i>
                                         </div>
                                         <div class="eg-how-work-text appeight-headline pera-content">
-                                            <h3>Sign in</h3>
-                                            <p>Sign in as a rentee if you are looking for a parking spot. Sign in as an owner if you are trying to rent your spot.</p>
+                                            <h3>Download it for Free</h3>
+                                            <p>As a app web crawler expert, I help organizations adjusting.</p>
                                         </div>
                                     </div>
                                     <div class="eg-how-work-icon-text position-relative">
@@ -416,8 +416,8 @@
                                             <i class="flaticon-corporate-identity"></i>
                                         </div>
                                         <div class="eg-how-work-text appeight-headline pera-content">
-                                            <h3>Search</h3>
-                                            <p>Search for parkings spots nearby or vehicles nearby!</p>
+                                            <h3>Input Identity</h3>
+                                            <p>As a app web crawler expert, I help organizations adjusting.</p>
                                         </div>
                                     </div>
                                     <div class="eg-how-work-icon-text position-relative">
@@ -426,8 +426,8 @@
                                             <i class="flaticon-text"></i>
                                         </div>
                                         <div class="eg-how-work-text appeight-headline pera-content">
-                                            <h3>Contact</h3>
-                                            <p>Contact the rentee/ owner!</p>
+                                            <h3>Write Details</h3>
+                                            <p>As a app web crawler expert, I help organizations adjusting.</p>
                                         </div>
                                     </div>
                                     <div class="eg-how-work-icon-text position-relative">
@@ -436,8 +436,8 @@
                                             <i class="flaticon-idea"></i>
                                         </div>
                                         <div class="eg-how-work-text appeight-headline pera-content">
-                                            <h3>Review</h3>
-                                            <p>Leave a review!</p>
+                                            <h3>Now Use It</h3>
+                                            <p>As a app web crawler expert, I help organizations adjusting.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -449,8 +449,8 @@
                             <div class="hw-mockup-img">
                                 <img src="{% static 'assets/img/app-landing/mockup/hw.gif' %}" alt="">
                             </div>
-                            <div class="hw-shape1 position-absolute" data-parallax='{"x" : 40}'><img src="{% static 'assets/img/app-landing/shape/fc1.png' %}" alt=""></div>
-                            <div class="hw-shape2 position-absolute" data-parallax='{"x" : -30}'><img src="{% static 'assets/img/app-landing/shape/fc2.png' %}" alt=""></div>
+                            <div class="hw-shape1 position-absolute" data-parallax='{"x" : 40}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fc1.png' %}' %}" alt=""></div>
+                            <div class="hw-shape2 position-absolute" data-parallax='{"x" : -30}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fc2.png' %}' %}" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -462,22 +462,31 @@
 
     <!-- Start of App Download  section
         ============================================= -->
-        <section id="ei-appdownload" class="ei-appdownload-section position-relative" data-background="{% static 'assets/img/app-landing/background/appbg1.png' %}">
+        <section id="ei-appdownload" class="ei-appdownload-section position-relative" data-background="{% static '"{% static 'assets/img/app-landing/background/appbg1.png' %}' %}">
             <div class="container">
                 <div class="ei-appdownload-content">
                     <div class="row">
-                        
+                        <div class="col-lg-6">
+                            <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <img src="{% static '"{% static 'assets/img/app-landing/mockup/amu1.png' %}' %}" alt="">
+                            </div>
+                        </div>
                         <div class="col-lg-6">
                             <div class="ei-app-down-text wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div class="eight-section-title appeight-headline pera-content text-left">
-                                    
-                                    <h2>Our services are currently available in
-                                        <span>this website only!.</span>
+                                    <span class="eg-title-tag">
+                                        App Download<i class="square-shape"><i></i><i></i><i></i><i></i></i>
+                                    </span>
+                                    <h2>This app is available for
+                                        <span>your smart phone.</span>
                                     </h2>
-                                    
+                                    <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                                 </div>
                                 <!-- /title -->
-                                
+                                <div class="app-down-btn">
+                                    <a href="#"><img src="{% static '"{% static 'assets/img/app-landing/shape/btn1.png' %}' %}" alt=""></a>
+                                    <a href="#"><img src="{% static '"{% static 'assets/img/app-landing/shape/btn2.png' %}' %}" alt=""></a>
+                                </div>
                                 <div class="ei-download-btn pera-content">
                                     <div class="download-icon float-left"><i class="flaticon-idea"></i></div>
                                     <p>Are you interested for this app?</p>
@@ -488,9 +497,9 @@
                     </div>
                 </div>
             </div>
-            <div class="ei-appdownloaad-shape app-shape1" data-parallax='{"y" : -100}'><img src="{% static 'assets/img/app-landing/background/apps1.png'%}" alt=""></div>
-            <div class="ei-appdownloaad-shape app-shape2" data-parallax='{"x" : -120}'><img src="{% static 'assets/img/app-landing/background/apps2.png'%}" alt=""></div>
-            <div class="ei-appdownloaad-shape app-shape3" data-parallax='{"y" : -100}'><img src="{% static 'assets/img/app-landing/background/apps3.png'%}" alt=""></div>
+            <div class="ei-appdownloaad-shape app-shape1" data-parallax='{"y" : -100}'><img src="{% static '"{% static 'assets/img/app-landing/background/apps1.png' %}'%}" alt=""></div>
+            <div class="ei-appdownloaad-shape app-shape2" data-parallax='{"x" : -120}'><img src="{% static '"{% static 'assets/img/app-landing/background/apps2.png' %}'%}" alt=""></div>
+            <div class="ei-appdownloaad-shape app-shape3" data-parallax='{"y" : -100}'><img src="{% static '"{% static 'assets/img/app-landing/background/apps3.png' %}'%}" alt=""></div>
         </section>
     <!-- End of App Download section
         ============================================= -->   
@@ -506,7 +515,7 @@
                         You will get good support
                         <span>from our team.</span>
                     </h2>
-                    
+                    <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                 </div>
                 <!-- /title -->
                 <div id="ei-team-slide" class="ei-team-content owl-carousel">
@@ -514,8 +523,8 @@
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
                                 <img src="{% static 'assets/img/app-landing/team/tm1.jpg' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -532,9 +541,9 @@
                     <div class="ei-team-pic-text wow fadeFromLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
-                                <img src="{% static 'assets/img/app-landing/team/tm2.png' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <img src="{% static '"{% static 'assets/img/app-landing/team/tm2.png' %}' %}" alt="">
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -551,9 +560,9 @@
                     <div class="ei-team-pic-text wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
-                                <img src="{% static 'assets/img/app-landing/team/tm3.png' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <img src="{% static '"{% static 'assets/img/app-landing/team/tm3.png' %}' %}" alt="">
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -570,9 +579,9 @@
                     <div class="ei-team-pic-text">
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
-                                <img src="{% static 'assets/img/app-landing/team/tm1.png' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <img src="{% static '"{% static 'assets/img/app-landing/team/tm1.png' %}' %}" alt="">
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -589,9 +598,9 @@
                     {% comment %} <div class="ei-team-pic-text">
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
-                                <img src="{% static 'assets/img/app-landing/team/tm2.png' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <img src="{% static '"{% static 'assets/img/app-landing/team/tm2.png' %}' %}" alt="">
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -608,9 +617,9 @@
                     {% comment %} <div class="ei-team-pic-text">
                         <div class="ei-team-img position-relative">
                             <div class="team-mem-img-ei text-center position-relative">
-                                <img src="{% static 'assets/img/app-landing/team/tm3.png' %}" alt="">
-                                <span class="mshape-bg shape-bg1"><img src="{% static 'assets/img/app-landing/team/msbg1.png' %}" alt=""></span>
-                                <span class="mshape-bg shape-bg2"><img src="{% static 'assets/img/app-landing/team/msbg2.png' %}" alt=""></span>
+                                <img src="{% static '"{% static 'assets/img/app-landing/team/tm3.png' %}' %}" alt="">
+                                <span class="mshape-bg shape-bg1"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg1.png' %}' %}" alt=""></span>
+                                <span class="mshape-bg shape-bg2"><img src="{% static '"{% static 'assets/img/app-landing/team/msbg2.png' %}' %}" alt=""></span>
                             </div>
                             <div class="ei-team-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
@@ -649,23 +658,34 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>We provide parking spots for your cars,motor cycle and cycle.</p>
+                                            <p>As a SAAS web crawler expert, I help organizations  to the expanding significance of internet promoting.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /title -->
                                 <div class="ei-faq-queans">
                                     <div class="accordion" id="accordionExample">
-                                       
+                                        <div class="ei-faq faq_bg">
+                                            <div class="ei-faq-header" id="headingOne">
+                                                <button class="" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                                                    What should I include in App?
+                                                </button>
+                                            </div>
+                                            <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                                                <div class="ei-faq-body">
+                                                    Lorem ipsum dolor sit amet consecte tur adipiscing elit sed <a href="#">eiusmod tempor incididunt</a> ut labore. In order to design a mobile app that is going to be module downloaded.
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="ei-faq">
                                             <div class="ei-faq-header" id="headingtwo">
                                                 <button class="collapsed" data-toggle="collapse" data-target="#collapsetwo" aria-controls="collapsetwo">
-                                                    How does the EzPark work?
+                                                    How does the Moodle app work?
                                                 </button>
                                             </div>
                                             <div id="collapsetwo" class="collapse" data-parent="#accordionExample">
                                                 <div class="ei-faq-body">
-                                                    You have to create an account. For Rentees, you have to buy credit hours. Each credit hour will give you a parking spot for one hour.
+                                                    Lorem ipsum dolor sit amet consecte tur adipiscing elit sed <a href="#">eiusmod tempor incididunt</a> ut labore. In order to design a mobile app that is going to be module downloaded.
                                                 </div>
                                             </div>
                                         </div>
@@ -677,19 +697,19 @@
                                             </div>
                                             <div id="collapsethree" class="collapse" data-parent="#accordionExample">
                                                 <div class="ei-faq-body">
-                                                    We are working on building an app. Till then, have some patience and enjoy our website!
+                                                    Lorem ipsum dolor sit amet consecte tur adipiscing elit sed <a href="#">eiusmod tempor incididunt</a> ut labore. In order to design a mobile app that is going to be module downloaded.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="ei-faq">
                                             <div class="ei-faq-header" id="headingfour">
                                                 <button class="collapsed" data-toggle="collapse" data-target="#collapsefour" aria-controls="collapsefour">
-                                                    How do I rent my parking spot?
+                                                    How do I disable installed apps?
                                                 </button>
                                             </div>
                                             <div id="collapsefour" class="collapse" data-parent="#accordionExample">
                                                 <div class="ei-faq-body">
-                                                    Open account as an owner, give the correct informations and free time slots. The rentee will contact you when they are looking for a spot! 
+                                                    Lorem ipsum dolor sit amet consecte tur adipiscing elit sed <a href="#">eiusmod tempor incididunt</a> ut labore. In order to design a mobile app that is going to be module downloaded.
                                                 </div>
                                             </div>
                                         </div>
@@ -699,15 +719,15 @@
                         </div>
                     </div>
                 </div>
-                <span class="ei-faq-shape fq-shape-style1" data-parallax='{"x" : 50}'><img src="{% static 'assets/img/app-landing/shape/fq-shape1.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style2"><img src="{% static 'assets/img/app-landing/shape/fq-shape2.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style3"><img src="{% static 'assets/img/app-landing/shape/fq-shape3.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style4" data-parallax='{"y" : 60}'><img src="{% static 'assets/img/app-landing/shape/fq-shape4.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style5"><img src="{% static 'assets/img/app-landing/shape/fq-shape5.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style6"><img src="{% static 'assets/img/app-landing/shape/fq-shape6.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style8"><img src="{% static 'assets/img/app-landing/shape/fq-shape8.png' %}" alt=""></span>
-                <span class="ei-faq-shape fq-shape-style7"><img src="{% static 'assets/img/app-landing/shape/fq-shape7.png' %}" alt=""><img src="{% static 'assets/img/app-landing/shape/fq-shape7.png' %}" alt="">
-                    <img src="{% static 'assets/img/app-landing/shape/fq-shape7.png' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style1" data-parallax='{"x" : 50}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape1.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style2"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape2.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style3"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape3.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style4" data-parallax='{"y" : 60}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape4.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style5"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape5.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style6"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape6.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style8"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape8.png' %}' %}" alt=""></span>
+                <span class="ei-faq-shape fq-shape-style7"><img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape7.png' %}" alt=""><img src="{% static 'assets/img/app-landing/shape/fq-shape7.png' %}' %}" alt="">
+                    <img src="{% static '"{% static 'assets/img/app-landing/shape/fq-shape7.png' %}' %}" alt=""></span>
                 </section>
     <!-- End of Faq section
         ============================================= --> 
@@ -715,13 +735,228 @@
 
     <!-- Start of screen-shoot section
         ============================================= -->
-        
+        <section id="ei-screenshots" class="ei-screenshots-section position-relative">
+            <div class="container">
+                <div class="eight-section-title appeight-headline pera-content text-center">
+                    <span class="eg-title-tag"> App screenshots <i class="square-shape"> <i></i><i></i><i></i><i></i></i></span>
+                    <h2>App screenshots is important to
+                        <span>know properly the app!</span></h2>
+                        <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
+                    </div>
+                    <!-- /title -->
+
+                    <div class="row ei-appScreenshotCarousel-container swiper-container">
+                        <div class="ei-screen-mobile-image"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot01.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot02.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot03.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot04.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/search.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot01.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot02.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot03.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/screenshot04.png' %}' %})"></div>
+                            <div class="swiper-slide" style="background-image:url({% static '"{% static 'assets/img/app-landing/screenshoot/search.png' %}' %})"></div>
+                        </div>
+                        <!-- Add Arrows -->
+                    </div>
+                    <!-- Navigations -->
+                    <div class="banner-navigation">
+                        <div class="swiper-button-prev"><span class="fas fa-chevron-left"></span></div>
+                        <div class="swiper-button-next"><span class="fas fa-chevron-right"></span></div>
+                    </div>
+                </div>
+                <div class="screenshoot-vector screenshoot-shape1 position-absolute"> <img src="{% static '"{% static 'assets/img/app-landing/shape/ss-shape1.png' %}' %}" alt=""></div>
+                <div class="screenshoot-vector screenshoot-shape2 position-absolute"> <img src="{% static '"{% static 'assets/img/app-landing/shape/ss-shape2.png' %}' %}" alt=""></div>
+            </section>
+    <!-- End of screen-shoot section
+        ============================================= --> 
 
 
-   
-     
+   <!-- Start of Testimonial section
+    ============================================= -->
+    <section id="ei-testimonial" class="ei-testimonial-section position-relative" data-background="{% static 'assets/img/app-landing/background/tbg.jpg' %}">
+        <div class="container">
+            <div class="eight-section-title appeight-headline pera-content text-center">
+                <span class="eg-title-tag">
+                    Testimonials<i class="square-shape"> <i></i><i></i><i></i><i></i> </i>
+                </span>
+                <h2>
+                    Client’s review for
+                    <span>work satisfaction.</span>
+                </h2>
+                <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
+            </div>
+            <!-- /title -->
+            <div class="ei-testimonial-content">
+                <div id="testimonial-scroller" class="testimonial-scroller-area owl-carousel">
+                    <div class="ei-testimonial-img-text position-relative">
+                        <div class="test--quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="ei-testimonial-img float-left text-center">
+                            <img src="{% static 'assets/img/app-landing/testimonial/tst1.jpg' %}" alt="">
+                        </div>
+                        <div class="ei-testimonial-text">
+                            <div class="ei-testimonial-name appeight-headline pera-content">
+                                <h3>Liana Zhu</h3>
+                                <span>Senior Director</span>
+                            </div>
+                            <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
+                            <div class="ei-testi-rate ul-li clearfix">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ei-testimonial-img-text position-relative">
+                        <div class="test--quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="ei-testimonial-img float-left text-center">
+                            <img src="{% static 'assets/img/app-landing/testimonial/tst2.jpg' %}" alt="">
+                        </div>
+                        <div class="ei-testimonial-text">
+                            <div class="ei-testimonial-name appeight-headline pera-content">
+                                <h3>Liana Zhu</h3>
+                                <span>Senior Director</span>
+                            </div>
+                            <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
+                            <div class="ei-testi-rate ul-li clearfix">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ei-testimonial-img-text position-relative">
+                        <div class="test--quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="ei-testimonial-img float-left text-center">
+                            <img src="{% static 'assets/img/app-landing/testimonial/tst1.jpg' %}" alt="">
+                        </div>
+                        <div class="ei-testimonial-text">
+                            <div class="ei-testimonial-name appeight-headline pera-content">
+                                <h3>Liana Zhu</h3>
+                                <span>Senior Director</span>
+                            </div>
+                            <p>As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
+                            <div class="ei-testi-rate ul-li clearfix">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-floatingimg testimonial-float-img1 ul-li-block">
+            <ul>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tf1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tf3.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tst1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tst2.jpg' %}" alt=""></li>
+            </ul>
+        </div>
+        <div class="testimonial-floatingimg testimonial-float-img2 ul-li-block">
+            <ul>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tf1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tf3.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tst1.jpg' %}" alt=""></li>
+                <li><img src="{% static 'assets/img/app-landing/testimonial/tst2.jpg' %}" alt=""></li>
+            </ul>
+        </div>
+    </section>
+   <!-- End of Testimonial section
+    ============================================= -->
 
-     
+     <!-- Start of Partner  section
+        ============================================= -->
+        <section id="ei-partner" class="ei-partner-section">
+            <div class="container">
+                <div class="ei-partner-content">
+                    <div id="ei-partner-slide" class="partner-slide-area owl-carousel">
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p1.png' %}' %}" alt="">
+                        </div>
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p2.png' %}' %}" alt="">
+                        </div>
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p3.png' %}' %}" alt="">
+                        </div>
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p4.png' %}' %}" alt="">
+                        </div>
+
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p2.png' %}' %}" alt="">
+                        </div>
+                        <div class="partner-img">
+                            <img src="{% static '"{% static 'assets/img/app-landing/partner/p3.png' %}' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="ei-partner-text appeight-headline pera-content">
+                        <div class="ei-partner-icon text-center float-left">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Trusted by 12,00 companies!</h4>
+                        <p>We have more than 1200+ trusted clients around World wide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <!-- End  of Partner  section
+        ============================================= -->  
+
+     <!-- Start of Newslatter  section
+        ============================================= -->
+        <section id="ei-newslatter" class="ei-newslatter-section position-relative">
+            <div class="ei-newslatter-box position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ei-newslatter-contnet appeight-headline pera-content">
+                                <h3>Subscribe to our <span>newsletter!</span></h3>
+                                <div class="ei-newslatter-form position-relative">
+                                    <form action="#">
+                                        <input class="email" name="email" type="email" placeholder="Enter your email address">
+                                        <div class="nws-button position-absolute text-capitalize">
+                                            <button class="hover-btn" type="submit" value="Submit"> Subscribe Now</button>
+                                        </div>
+                                        <p>* Your mail address will be fully secure . We don’t share!</p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ei-news-vector1 position-absolute"><img src="{% static '"{% static 'assets/img/app-landing/shape/n-shape1.png' %}' %}" alt=""></div>
+                <div class="ei-news-vector2 position-absolute"><img src="{% static '"{% static 'assets/img/app-landing/shape/n-shape2.png' %}' %}" alt=""></div>
+                <div class="ei-news-vector3 position-absolute" data-parallax='{"x" : 50}'><img src="{% static '"{% static 'assets/img/app-landing/shape/n-shape3.png' %}' %}" alt=""></div>
+            </div>
+            <div class="ei-newslatter-mockup">
+                <img src="{% static '"{% static 'assets/img/app-landing/mockup/n-mockup.png' %}' %}" alt="">
+            </div>
+        </section>
+     <!-- End of Newslatter  section
+        ============================================= -->
 
       <!-- Start of Footer  section
         ============================================= -->
@@ -730,10 +965,14 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="ei-footer-widget pera-content appeight-headline">
-                            
-                            <b>EzPark</b>
+                            <div class="ei-footer-logo">
+                                <img src="{% static '"{% static 'assets/img/app-landing/logo/f-logo.png' %}' %}" alt="">
+                            </div>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and type.
+                            </p>
                             <div class="ei-payment-mathod">
-                                <img src="{% static 'assets/img/app-landing/logo/paypal.png' %}" alt="">
+                                <img src="{% static '"{% static 'assets/img/app-landing/logo/paypal.png' %}' %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -759,15 +998,18 @@
                             <h3 class="ei-widget-title">Contact:</h3>
                             <h4>
                                 <i class="fas fa-phone"></i>
-                                Call Us: +8801820069443
-                                
+                                Call Us: (210) 123451 
+                                <span>(Sat - Thursday)</span>
                             </h4>
                             <h4>
                                <i class="fas fa-map-marker-alt"></i>
-                                BRAC University
-                                <span>Dhaka, Bangladesh</span>
+                                380 St Kilda Road, 
+                                <span>Melbourne, Australia</span>
                             </h4>
-
+                            <div class="download-btn">
+                                <a href="#"><img src="{% static '"{% static 'assets/img/app-landing/logo/app1.png' %}' %}" alt=""></a>
+                                <a href="#"><img src="{% static '"{% static 'assets/img/app-landing/logo/gp1.png' %}' %}" alt=""></a>
+                            </div>
                             <div class="ei-footer-social">
                                 <a href="#"><i class="fab fa-facebook-f "></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -798,31 +1040,31 @@
                     </div>
                 </div>
             </div>
-            <div class="ei-footer-shape1 position-absolute" data-parallax='{"x" : 60}'><img src="{% static 'assets/img/app-landing/shape/fo-shape1.png' %}" alt=""></div>
-            <div class="ei-footer-shape2 position-absolute" data-parallax='{"y" : 60}'><img src="{% static 'assets/img/app-landing/shape/fo-shape2.png' %}" alt=""></div>
-            <div class="ei-footer-shape3 position-absolute"><img src="{% static 'assets/img/app-landing/shape/eimap.png' %}" alt=""></div>
+            <div class="ei-footer-shape1 position-absolute" data-parallax='{"x" : 60}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fo-shape1.png' %}' %}" alt=""></div>
+            <div class="ei-footer-shape2 position-absolute" data-parallax='{"y" : 60}'><img src="{% static '"{% static 'assets/img/app-landing/shape/fo-shape2.png' %}' %}" alt=""></div>
+            <div class="ei-footer-shape3 position-absolute"><img src="{% static '"{% static 'assets/img/app-landing/shape/eimap.png' %}' %}" alt=""></div>
         </section>
       <!-- End of Footer  section
         ============================================= -->            
         
         
         <!-- JS library -->
-        <script src="{% static 'assets/js/jquery.js' %}"></script>
-        <script src="{% static 'assets/js/popper.min.js' %}"></script>
-        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'assets/js/appear-2.js' %}"></script>
-        <script src="{% static 'assets/js/owl.js' %}"></script>
-        <script src="{% static 'assets/js/wow.min.js' %}"></script>
-        <script src="{% static 'assets/js/aos.js' %}"></script>
-        <script src="{% static 'assets/js/slick.js' %}"></script>
-        <script src="{% static 'assets/js/pagenav.js' %}"></script>
-        <script src="{% static 'assets/js/bxslider.js' %}"></script>
-        <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
-        <script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-        <script src="{% static 'assets/js/parallax-scroll.js' %}"></script>
-        <script src="{% static 'assets/js/swiper.min.js' %}"></script>
-        <script src="{% static 'assets/js/typer-new.js' %}"></script>
-        <script src="{% static 'assets/js/odometer.js' %}"></script>
-        <script src="{% static 'assets/js/script.js' %}"></script>
+        <script src="{% static '"{% static 'assets/js/jquery.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/popper.min.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/bootstrap.min.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/appear-2.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/owl.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/wow.min.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/aos.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/slick.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/pagenav.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/bxslider.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/jquery.barfiller.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/parallax-scroll.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/swiper.min.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/typer-new.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/odometer.js' %}' %}"></script>
+        <script src="{% static '"{% static 'assets/js/script.js' %}' %}"></script>
     </body>
     </html>

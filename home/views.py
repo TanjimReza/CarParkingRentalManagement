@@ -3,7 +3,9 @@ import re
 from django.shortcuts import redirect, render
 from .forms import *
 from .models import *
-from django.contrib.auth import authenticate,login, logout
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_user
+from django.contrib.auth import logout as logout_user
 from django.contrib import messages
 # Create your views here.
 
@@ -17,7 +19,7 @@ def home(request):
     context = {'context': UserList}
     return render(request, 'home/home.html',context=context)
 
-def userlogin(request):
+def login(request):
     if request.user.is_authenticated:
         print('Authenticated User:', request.user.nid)
     print(request.POST)
@@ -26,13 +28,13 @@ def userlogin(request):
     user = authenticate(request, nid=nid, password=password)
     print(user)
     if user is not None:
-        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+        login_user(request, user, backend='django.contrib.auth.backends.ModelBackend')
         messages.success(request, 'User logged in successfully')
         # return redirect('home')
         return redirect('dashboard')
     else: 
         messages.error(request, 'Invalid credentials')
-        return render(request, 'home/userlogin.html',context={})
+        return render(request, 'home/login.html',context={})
         # return redirect('login')
         # return render 
     # form = CustomUserForm(request.POST)
@@ -43,8 +45,8 @@ def userlogin(request):
     #         messages.success(request, 'User logged in successfully')
     #         return redirect('/')
     # context = {'form': form}
-def userlogout(request):
-    logout(request)
+def logout(request):
+    logout_user(request)
     context = {'context': 'Logged out successfully'}
     return redirect('home')
 
@@ -64,7 +66,7 @@ def signup(request):
             nid = request.POST.get('nid')
             password = request.POST.get('password')
             user = authenticate(request, nid=nid, password=password)
-            login(request,user,backend='django.contrib.auth.backends.ModelBackend')
+            login_user(request,user,backend='django.contrib.auth.backends.ModelBackend')
             messages.success(request, 'User created successfully')
             return redirect('/')
         else: 
@@ -106,7 +108,7 @@ def dashboard(request):
         return render(request,'home/dashboard.html')
     else:
         messages.error(request,"You need to login first!")
-        return redirect(userlogin)
+        return redirect(login)
 def sidebar(request):
     return render(request, 'home/sidebar.html')
 
