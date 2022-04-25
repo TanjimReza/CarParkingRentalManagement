@@ -48,7 +48,7 @@ def login(request):
 def logout(request):
     logout_user(request)
     context = {'context': 'Logged out successfully'}
-    return redirect('home')
+    return redirect('index')
 
 def signup(request):
     if request.POST.get('is_spot_owner') =="S":
@@ -76,22 +76,49 @@ def signup(request):
 
 def testlogin(request):
     form = UserForm(request.POST)
-    # form = SpotOwnerForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
             user = form.save()
             user.set_password(request.POST.get('password'))
             user.save()
-            messages.success(request, 'User created successfully')
-            user_type = request.POST.get('is_spot_owner')
-            print("USERTYPE",user_type)
-            if user_type == "S":
-                usertype = SpotOwner(nid=user)
-                usertype.save()             
-            return redirect('/')
-        else: 
-            print("Form invalid")
+            
+        if request.POST.get('is_owner') == "S":
+            print("OWNER")
+            owner = OwnerForm(request.POST)
+            if owner.is_valid():
+                owner.save()
+            else: 
+                print("Invalid Owner")
+        if request.POST.get('is_owner') == "R": 
+            print("Rentee")
+            rentee = RenteeForm(request.POST)
+            if rentee.is_valid():
+                rentee.save()
+            else:
+                print("Invalid Rentee")
+            
+            
+    else: 
+        print("Form invalid")
+    
+    
+    # form = SpotOwnerForm(request.POST)
+    # if request.method == 'POST':
+    #     print(request.POST)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         user.set_password(request.POST.get('password'))
+    #         user.save()
+    #         messages.success(request, 'User created successfully')
+    #         user_type = request.POST.get('is_spot_owner')
+    #         print("USERTYPE",user_type)
+    #         if user_type == "S":
+    #             usertype = SpotOwner(nid=user)
+    #             usertype.save()             
+    #         return redirect('/')
+    #     else: 
+    #         print("Form invalid")
     context = {'form': form}
     print(context)
     return render(request, 'home/test_login.html',context=context)
