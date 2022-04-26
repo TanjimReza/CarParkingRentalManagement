@@ -1,4 +1,3 @@
-
 import re
 from django.shortcuts import redirect, render
 from .forms import *
@@ -51,26 +50,52 @@ def logout(request):
     return redirect('index')
 
 def signup(request):
-    if request.POST.get('is_spot_owner') =="S":
-        form = OwnerForm(request.POST)
-    else: 
-        form = RenteeForm(request.POST)
-    print(request.POST)
-    print("Errors",form.errors)
+    form = UserForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
             user = form.save()
             user.set_password(request.POST.get('password'))
             user.save()
-            nid = request.POST.get('nid')
-            password = request.POST.get('password')
-            user = authenticate(request, nid=nid, password=password)
-            login_user(request,user,backend='django.contrib.auth.backends.ModelBackend')
-            messages.success(request, 'User created successfully')
-            return redirect('/')
-        else: 
-            print("Form invalid")
+            
+        if request.POST.get('is_owner') == "S":
+            print("OWNER")
+            owner = OwnerForm(request.POST)
+            if owner.is_valid():
+                owner.save()
+            else: 
+                print("Invalid Owner")
+        if request.POST.get('is_owner') == "R": 
+            print("Rentee")
+            rentee = RenteeForm(request.POST)
+            if rentee.is_valid():
+                rentee.save()
+            else:
+                print("Invalid Rentee")
+            
+            
+    else: 
+        print("Form invalid")
+    # if request.POST.get('is_spot_owner') =="S":
+    #     form = OwnerForm(request.POST)
+    # else: 
+    #     form = RenteeForm(request.POST)
+    # print(request.POST)
+    # print("Errors",form.errors)
+    # if request.method == 'POST':
+    #     print(request.POST)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         user.set_password(request.POST.get('password'))
+    #         user.save()
+    #         nid = request.POST.get('nid')
+    #         password = request.POST.get('password')
+    #         user = authenticate(request, nid=nid, password=password)
+    #         login_user(request,user,backend='django.contrib.auth.backends.ModelBackend')
+    #         messages.success(request, 'User created successfully')
+    #         return redirect('/')
+    #     else: 
+    #         print("Form invalid")
     context = {'form': form}
     return render(request, 'home/signup.html',context=context)
 
