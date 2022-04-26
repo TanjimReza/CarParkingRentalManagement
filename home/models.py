@@ -38,25 +38,25 @@ class SpotOwner(models.Model):
         ('R', 'Rentee'),
         ('S', 'Spot Owner'),
     )
-    nid = models.OneToOneField(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
+    nid = models.ForeignKey(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     password = models.CharField(max_length=128)
     contact = models.CharField(max_length=15, null=True)
     last_login = models.DateTimeField(auto_now_add=True, null=True)
     is_owner = models.CharField(max_length=10, choices=user_type,default='user')
-    # USERNAME_FIELD = 'nid'
-    # objects = UsersManager()
+    USERNAME_FIELD = 'nid'
+    objects = UsersManager()
     
     def __str__(self):
-        return self.nid
+        return str(self.nid)
 
 class Rentee(models.Model):
     user_type = (
         ('R', 'Rentee'),
         ('S', 'Spot Owner'),
     )
-    nid = models.OneToOneField(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
+    nid = models.ForeignKey(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     password = models.CharField(max_length=128)
@@ -66,23 +66,13 @@ class Rentee(models.Model):
     # USERNAME_FIELD = 'nid'
     # objects = UsersManager()
     def __str__(self):
-        return self.nid
+        return str(self.nid)
 
-# class SpotOwner(models.Model):
-#     nid = models.OneToOneField(Users, on_delete=models.CASCADE, unique=True, primary_key=True)
-#     def __str__(self) -> str:
-#         return self.nid.nid
-    
-# class Rentee(models.Model):
-#     nid = models.ForeignKey(Users, on_delete=models.CASCADE)
-#     vehicle_type = models.CharField(max_length=200)
-#     rentee_credit = models.IntegerField()
-#     def __str__(self):
-#         return self.name
 
 class ParkingSlots(models.Model):
+    # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
     slot_id = models.CharField(max_length=30, unique=True, primary_key=True)
-    owner = models.OneToOneField(Users, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Rentee, related_name='parking_slots', on_delete=models.CASCADE, null=True)
     house = models.CharField(max_length=200)
     area = models.CharField(max_length=200)
     street = models.CharField(max_length=200)
