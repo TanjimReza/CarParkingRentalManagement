@@ -45,8 +45,8 @@ class SpotOwner(models.Model):
     contact = models.CharField(max_length=15, null=True)
     last_login = models.DateTimeField(auto_now_add=True, null=True)
     is_owner = models.CharField(max_length=10, choices=user_type,default='user')
-    USERNAME_FIELD = 'nid'
-    objects = UsersManager()
+    # USERNAME_FIELD = 'nid'
+    # objects = UsersManager()
     
     def __str__(self):
         return str(self.nid)
@@ -72,7 +72,7 @@ class Rentee(models.Model):
 class ParkingSlots(models.Model):
     # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
     slot_id = models.CharField(max_length=30, unique=True, primary_key=True)
-    owner = models.ForeignKey(Rentee, related_name='parking_slots', on_delete=models.CASCADE, null=True)
+    owner = models.ForeignKey(SpotOwner, related_name='parking_slots', on_delete=models.CASCADE, null=True)
     house = models.CharField(max_length=200)
     area = models.CharField(max_length=200)
     street = models.CharField(max_length=200)
