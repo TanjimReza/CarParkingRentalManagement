@@ -70,7 +70,7 @@ class Rentee(models.Model):
 
 
 class ParkingSlots(models.Model):
-    SLOTS = ['9:00AM-11:00AM','11:00AM-1:00AM','1:00PM-3:00PM','3:00PM-5:00PM']
+    SLOTS = ['9:00AM-11:00AM','11:00AM-1:00PM','1:00PM-3:00PM','3:00PM-5:00PM']
     # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
     slot_id = models.CharField(max_length=30, unique=True, primary_key=True)
     owner = models.ForeignKey(SpotOwner, related_name='parking_slots', on_delete=models.CASCADE, null=True)

@@ -28,6 +28,7 @@ urlpatterns = [
    path('dashboard/',views.dashboard, name='dashboard'),
    path('sidebar/',views.sidebar, name='sidebar'),
    path('bookslot/',views.bookslot, name='bookslot'),
-   path('addslots/',views.addslots, name='addslots'),
+   path('createslot/',views.createslot, name='createslot'),
+   path('searchslot/',views.searchslot, name='searchslot'),
 
 ]
