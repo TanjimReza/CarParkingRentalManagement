@@ -30,5 +30,6 @@ urlpatterns = [
    path('bookslot/',views.bookslot, name='bookslot'),
    path('createslot/',views.createslot, name='createslot'),
    path('searchslot/',views.searchslot, name='searchslot'),
+   path('payment/',views.payment, name='payment'),
 
 ]

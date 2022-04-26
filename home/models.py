@@ -83,30 +83,6 @@ class ParkingSlots(models.Model):
     def __str__(self) -> str:
         return str(self.slot_id)
 
-    # class Meta:
-    #     managed = False
-    #     db_table = 'parkingslots'
-
-
-
-# class ParkingTimeSlots(models.Model):
-#     # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
-#     slot_id = models.ForeignKey(ParkingSlots, on_delete=models.CASCADE, null=True)
-#     renter = models.ForeignKey(Rentee, related_name='parking_slots', on_delete=models.CASCADE, null=True)
-#     # time_slot = models.ManyToManyField(TimeSlots)
-#     # time_slot = models.CharField(max_length=50, choices=MEMBERS)
-#     # house = models.CharField(max_length=200)
-#     # area = models.CharField(max_length=200)
-#     # street = models.CharField(max_length=200)
-#     # city = models.CharField(max_length=200)
-#     # class Meta:
-#     #     managed = False
-#     #     db_table = 'parkingtimeslots'
-#     #     unique_together = (('renter', 'time_slot', 'slot_id'),)
-    
-#     def __str__(self) -> str:
-#         return self.slot_id
-
 class Credit(models.Model):
     nid = models.ForeignKey(Rentee, on_delete=models.CASCADE)
     rentee_credit = models.IntegerField()
@@ -118,3 +94,11 @@ class Rentee_Reviews_ParkingSlots(models.Model):
     rating = models.CharField(max_length=200)
 
 
+class payment(models.Model):
+    nid= models.ForeignKey(Rentee, null=True, on_delete=models.SET_NULL)
+    amount = models.IntegerField(null=True)
+    credit = models.IntegerField(null=True)
+    trxID = models.CharField(max_length=20, null=True)
+    
+    def __str__(self) -> str:
+        return str(self.nid)

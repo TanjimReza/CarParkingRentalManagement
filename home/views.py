@@ -64,7 +64,7 @@ def signup(request):
             else:
                 print("Invalid Rentee")
             
-            
+        return redirect(dashboard)
     else: 
         print("Form invalid")
  
@@ -169,3 +169,15 @@ def createslot(request):
             print("NOT POST")
         context = {'form': form}
     return render(request, 'home/createslot.html', context=context)
+
+def payment(request):
+    print(request.POST)
+    form = paymentForm(request.POST)
+    if request.method == "POST":
+        if form.is_valid():
+            print("FORM IS VALID")
+            form.save()
+        else:
+            print("FORM INVALIIIIIIIIID")
+    context = {'form':form}
+    return render(request, 'home/payment.html',context=context)
