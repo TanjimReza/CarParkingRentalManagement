@@ -33,7 +33,7 @@ class Users(AbstractBaseUser):
     def __str__(self):
         return self.nid
 
-class SpotOwner(AbstractBaseUser):
+class SpotOwner(models.Model):
     user_type = (
         ('R', 'Rentee'),
         ('S', 'Spot Owner'),
@@ -45,12 +45,13 @@ class SpotOwner(AbstractBaseUser):
     contact = models.CharField(max_length=15, null=True)
     last_login = models.DateTimeField(auto_now_add=True, null=True)
     is_owner = models.CharField(max_length=10, choices=user_type,default='user')
-    USERNAME_FIELD = 'nid'
-    objects = UsersManager()
+    # USERNAME_FIELD = 'nid'
+    # objects = UsersManager()
+    
     def __str__(self):
         return self.nid
 
-class Rentee(AbstractBaseUser):
+class Rentee(models.Model):
     user_type = (
         ('R', 'Rentee'),
         ('S', 'Spot Owner'),
@@ -62,8 +63,8 @@ class Rentee(AbstractBaseUser):
     contact = models.CharField(max_length=15, null=True)
     last_login = models.DateTimeField(auto_now_add=True, null=True)
     is_owner = models.CharField(max_length=10, choices=user_type,default='user')
-    USERNAME_FIELD = 'nid'
-    objects = UsersManager()
+    # USERNAME_FIELD = 'nid'
+    # objects = UsersManager()
     def __str__(self):
         return self.nid
 
@@ -81,7 +82,7 @@ class Rentee(AbstractBaseUser):
 
 class ParkingSlots(models.Model):
     slot_id = models.CharField(max_length=30, unique=True, primary_key=True)
-    owner = models.ForeignKey(SpotOwner, on_delete=models.CASCADE)
+    owner = models.OneToOneField(Users, on_delete=models.CASCADE)
     house = models.CharField(max_length=200)
     area = models.CharField(max_length=200)
     street = models.CharField(max_length=200)

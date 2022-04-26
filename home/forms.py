@@ -19,3 +19,9 @@ class RenteeForm(ModelForm):
     class Meta:
         model = Rentee
         fields = '__all__'
+        
+class ParkingSlotsForm(ModelForm):
+    class Meta:
+        model = ParkingSlots
+        fields = '__all__'
+        

@@ -100,32 +100,43 @@ def signup(request):
     return render(request, 'home/signup.html',context=context)
 
 def testlogin(request):
-    form = UserForm(request.POST)
+    
+    form = ParkingSlotsForm(request.POST)
     if request.method == 'POST':
         print(request.POST)
         if form.is_valid():
-            user = form.save()
-            user.set_password(request.POST.get('password'))
-            user.save()
+            form.save()
+        else: 
+            print("Form invalid")
+    context = {'form': form}
+    return render(request, 'home/test_login.html',context=context)
+    
+    # form = UserForm(request.POST)
+    # if request.method == 'POST':
+    #     print(request.POST)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         user.set_password(request.POST.get('password'))
+    #         user.save()
             
-        if request.POST.get('is_owner') == "S":
-            print("OWNER")
-            owner = OwnerForm(request.POST)
-            if owner.is_valid():
-                owner.save()
-            else: 
-                print("Invalid Owner")
-        if request.POST.get('is_owner') == "R": 
-            print("Rentee")
-            rentee = RenteeForm(request.POST)
-            if rentee.is_valid():
-                rentee.save()
-            else:
-                print("Invalid Rentee")
+    #     if request.POST.get('is_owner') == "S":
+    #         print("OWNER")
+    #         owner = OwnerForm(request.POST)
+    #         if owner.is_valid():
+    #             owner.save()
+    #         else: 
+    #             print("Invalid Owner")
+    #     if request.POST.get('is_owner') == "R": 
+    #         print("Rentee")
+    #         rentee = RenteeForm(request.POST)
+    #         if rentee.is_valid():
+    #             rentee.save()
+    #         else:
+    #             print("Invalid Rentee")
             
             
-    else: 
-        print("Form invalid")
+    # else: 
+    #     print("Form invalid")
     
     
     # form = SpotOwnerForm(request.POST)
@@ -144,9 +155,9 @@ def testlogin(request):
     #         return redirect('/')
     #     else: 
     #         print("Form invalid")
-    context = {'form': form}
-    print(context)
-    return render(request, 'home/test_login.html',context=context)
+    # context = {'form': form}
+    # print(context)
+    # return render(request, 'home/test_login.html',context=context)
     
 
 def spots(request):
