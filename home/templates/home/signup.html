@@ -87,15 +87,25 @@
                                     <div class="form-group">
                                         <input id="id_contact" class="form-control" type="text" name="contact"
                                             maxlength="15" required>
-                                        <label class="form-control-placeholder" for="id_contact">Contact:</label>
+                                        <label class="form-control-placeholder" for="id_contact">Phone:</label>
                                     </div>
-                                    <div class="form-group">
+                                    {% comment %} <div class="form-group">
                                         <input id="id_user_role" class="form-control" type="text" name="user_role"
                                             maxlength="15" required>
-                                        <label class="form-control-placeholder" for="id_user_role">User Type:</label>
+                                            
+                                        <label class="form-control-placeholder" for="id_user_role">Owner/Rentee</label>
+                                    </div> {% endcomment %}
+                                    <div class="form-group">
+                                        {% comment %} <input id="id_user_role" class="form-control" type="text" name="user_role"
+                                            maxlength="15" required> {% endcomment %}
+                                            {% comment %} <label class="form-control-placeholder" for="id_user_role">Owner/Rentee</label> {% endcomment %}
+                                            <select class="form-control" name="is_owner" id="id_is_owner"  for = "id_is_owner" required>
+                                                <option value="S">Spot Owner</option>
+                                                <option value="R">Spot Rentee</option>
+                                              </select>    
+                                        
                                     </div>
-                                    
-                                    
+                                            
                                     <div class="form-group">
                                         <button type="submit"
                                             class="form-control btn btn-primary rounded submit px-3">Sign
