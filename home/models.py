@@ -70,16 +70,42 @@ class Rentee(models.Model):
 
 
 class ParkingSlots(models.Model):
+    SLOTS = ['9:00AM-11:00AM','11:00AM-1:00AM','1:00PM-3:00PM','3:00PM-5:00PM']
     # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
     slot_id = models.CharField(max_length=30, unique=True, primary_key=True)
     owner = models.ForeignKey(SpotOwner, related_name='parking_slots', on_delete=models.CASCADE, null=True)
     house = models.CharField(max_length=200)
     area = models.CharField(max_length=200)
     street = models.CharField(max_length=200)
+    time_slots = models.CharField(max_length=256, default=SLOTS, null=True,editable=False)
 #     city = models.CharField(max_length=200)
     
     def __str__(self) -> str:
-        return self.slot_id
+        return str(self.slot_id)
+
+    # class Meta:
+    #     managed = False
+    #     db_table = 'parkingslots'
+
+
+
+# class ParkingTimeSlots(models.Model):
+#     # owner_nid = models.ForeignKey(SpotOwner, on_delete=models.SET_NULL, null=True)
+#     slot_id = models.ForeignKey(ParkingSlots, on_delete=models.CASCADE, null=True)
+#     renter = models.ForeignKey(Rentee, related_name='parking_slots', on_delete=models.CASCADE, null=True)
+#     # time_slot = models.ManyToManyField(TimeSlots)
+#     # time_slot = models.CharField(max_length=50, choices=MEMBERS)
+#     # house = models.CharField(max_length=200)
+#     # area = models.CharField(max_length=200)
+#     # street = models.CharField(max_length=200)
+#     # city = models.CharField(max_length=200)
+#     # class Meta:
+#     #     managed = False
+#     #     db_table = 'parkingtimeslots'
+#     #     unique_together = (('renter', 'time_slot', 'slot_id'),)
+    
+#     def __str__(self) -> str:
+#         return self.slot_id
 
 class Credit(models.Model):
     nid = models.ForeignKey(Rentee, on_delete=models.CASCADE)

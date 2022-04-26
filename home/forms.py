@@ -24,4 +24,14 @@ class ParkingSlotsForm(ModelForm):
     class Meta:
         model = ParkingSlots
         fields = '__all__'
-        
+
+# class ParkingTimeSlotsForm(ModelForm):
+#     class Meta:
+#         model = ParkingTimeSlots
+#         fields = '__all__'
+
+
+# class TimeSlotsForm(ModelForm):
+#     class Meta:
+#         model = TimeSlots
+#         fields = '__all__'
