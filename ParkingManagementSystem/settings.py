@@ -150,6 +150,6 @@ AUTH_USER_MODEL = 'home.Users'
 #     'home.backend.CaseInsensitiveModelBackend',
 #     'django.contrib.auth.backends.ModelBackend',
 # )
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
