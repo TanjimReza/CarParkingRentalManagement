@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ri59oolqamb1qh$3yhbrr0jq&&aoz=bz@n#!zb4fslla2ss+v2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*','tanjimparking.herokuapp.com']
 
 
 # Application definition
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    "whitenoise.runserver_nostatic",
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,14 +78,22 @@ WSGI_APPLICATION = 'ParkingManagementSystem.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lab_test',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'tanjimre_lab_test',
+        'USER': 'tanjimre_tanjim',
+        'PASSWORD': 'd2Mw@TEJjcin2Ge',
+        'HOST': 'clients.cmsngroup.com.au',
+        #'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'lab_test',
+    #     'USER': 'root',
+    #     'PASSWORD': '',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    # }
 }
 
 
@@ -135,6 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ###! ADDED
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 AUTH_USER_MODEL = 'home.Users'
 # AUTHENTICATION_BACKENDS = (
 #     'django.contrib.auth.backends.AllowAllUsersModelBackend',
