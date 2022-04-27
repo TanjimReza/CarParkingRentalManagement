@@ -1,9 +1,27 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<form action="" method = "POST">
+
+<h2>{{form.valid}}</h2>
+<form action="" method="post">
     {% csrf_token %}
     {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+
+{% comment %} <p>"First"</p>
+<form action="" method = "POST">
+    {% csrf_token %}
+    {{form2.as_p}}
+    <button type="submit">Submit</button>
+</form> {% endcomment %}
+{% comment %} <p>"Second"</p>
+<form action="" method = "POST">
+    {% csrf_token %}
+    {{form2.as_p}}
     <button type="submit">Submit</button>
 </form>
-{% endblock content %}
+<hr> {% endcomment %}
+
+{% endblock %}

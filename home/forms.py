@@ -1,9 +1,32 @@
-from dataclasses import field
+import email
 from django.forms import ModelForm
-from .models import CustomUser
+from .models import *
+from django.contrib.auth.forms import UserCreationForm
 
-class CustomUserForm(ModelForm):
+
+class UserForm(ModelForm):
     class Meta: 
-        model = CustomUser
-        fields =['email','username','password']
-        # fields = '__all__'
+        model = Users
+        fields = '__all__'
+
+
+class OwnerForm(ModelForm):
+    class Meta:
+        model = SpotOwner
+        fields = '__all__'
+
+class RenteeForm(ModelForm):
+    class Meta:
+        model = Rentee
+        fields = '__all__'
+        
+class ParkingSlotsForm(ModelForm):
+    class Meta:
+        model = ParkingSlots
+        fields = '__all__'
+
+class paymentForm(ModelForm):
+    class Meta:
+        model = payment
+        fields = '__all__'
+        

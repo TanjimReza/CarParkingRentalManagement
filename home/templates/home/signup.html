@@ -42,7 +42,7 @@
                                         <h3 class="btn btn-primary btn-lg" style="text-decoration: underline;">Log In
                                         </h3>
                                     </a> {% endcomment %}
-                                    <a href="{% url 'userlogin'%}"><button type="button"
+                                    <a href="{% url 'login'%}"><button type="button"
                                             class="btn btn-outline-primary btn-lg">⠀⠀⠀Login⠀⠀⠀</button></a>
                                 </div>
                                 <div class="w-100">
@@ -65,20 +65,47 @@
                                         <label class="form-control-placeholder" for="id_first_name">First Name</label>
                                     </div> {% endcomment %}
                                     <div class="form-group">
-                                        <input id="id_email" class="form-control" type="text" name="email"
-                                            maxlength="200" required>
-                                        <label class="form-control-placeholder" for="id_email">Email:</label>
+                                        <input id="id_nid" class="form-control" type="text" name="nid"
+                                            maxlength="30" required>
+                                        <label class="form-control-placeholder" for="id_nid">NID:</label>
                                     </div>
                                     <div class="form-group">
-                                        <input id="id_username" class="form-control" type="text" name="username"
+                                        <input id="id_name" class="form-control" type="text" name="name"
                                             maxlength="200" required>
-                                        <label class="form-control-placeholder" for="id_username">Username:</label>
+                                        <label class="form-control-placeholder" for="id_Full Name">Full Name:</label>
                                     </div>
                                     <div class="form-group">
                                         <input id="id_password" class="form-control" type="text" name="password"
                                             maxlength="128" required>
                                         <label class="form-control-placeholder" for="id_password">Password:</label>
                                     </div>
+                                    <div class="form-group">
+                                        <input id="id_email" class="form-control" type="text" name="email"
+                                            maxlength="200" required>
+                                        <label class="form-control-placeholder" for="id_contact">Email:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="id_contact" class="form-control" type="text" name="contact"
+                                            maxlength="15" required>
+                                        <label class="form-control-placeholder" for="id_contact">Phone:</label>
+                                    </div>
+                                    {% comment %} <div class="form-group">
+                                        <input id="id_user_role" class="form-control" type="text" name="user_role"
+                                            maxlength="15" required>
+                                            
+                                        <label class="form-control-placeholder" for="id_user_role">Owner/Rentee</label>
+                                    </div> {% endcomment %}
+                                    <div class="form-group">
+                                        {% comment %} <input id="id_user_role" class="form-control" type="text" name="user_role"
+                                            maxlength="15" required> {% endcomment %}
+                                            {% comment %} <label class="form-control-placeholder" for="id_user_role">Owner/Rentee</label> {% endcomment %}
+                                            <select class="form-control" name="is_owner" id="id_is_owner"  for = "id_is_owner" required>
+                                                <option value="S">Spot Owner</option>
+                                                <option value="R">Spot Rentee</option>
+                                              </select>    
+                                        
+                                    </div>
+                                            
                                     <div class="form-group">
                                         <button type="submit"
                                             class="form-control btn btn-primary rounded submit px-3">Sign
