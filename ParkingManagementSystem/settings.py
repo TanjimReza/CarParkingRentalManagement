@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ri59oolqamb1qh$3yhbrr0jq&&aoz=bz@n#!zb4fslla2ss+v2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS =  ['*','tanjimparking.herokuapp.com']
 
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'ParkingManagementSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tanjimre_lab_test',
-        'USER': 'tanjimre_tanjim',
+        'ENGINE': 'django.db.backends.mysql', #! MESSING UP WITH MY DATABSE KEYS WON'T BE A GOOD IDEA??! 
+        'NAME': 'tanjimre_lab_test', #!! YOU UNDERSTAND THIS RIGHT????
+        'USER': 'tanjimre_tanjim', 
         'PASSWORD': 'd2Mw@TEJjcin2Ge',
         'HOST': 'clients.cmsngroup.com.au',
         #'PORT': '3306',
@@ -155,4 +155,3 @@ AUTH_USER_MODEL = 'home.Users'
 # )
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
